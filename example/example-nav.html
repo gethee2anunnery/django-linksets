@@ -1,0 +1,25 @@
+{% load links %}
+
+{% get_link_descendants 'main-nav' as links %}
+
+<div class="container">
+    <nav class="main">
+        <ul class="level-1">
+            {% for link in links %}
+            <li>
+                <a href="{{link.item.get_path}}" id="{{link.item.txtid}}">{{link.item.display_name}}</a>
+            </li>
+            {% if link.children|length > 0 %}
+                <ul class="level-2">
+                    {% for child in link.children %}
+                    <li>
+                        <a href="{{child.item.get_path}}" id="{{link.item.txtid}}">{{ child.item.display_name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            {% endfor %}
+        </ul>
+    </nav>
+</div>
