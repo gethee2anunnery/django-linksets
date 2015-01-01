@@ -1,3 +1,5 @@
+all: pep8 clean
+
 clean:
 	-test -d $(PWD)/dist && rm -rf $(PWD)/dist &>/dev/null
 	-test -d $(PWD)/build && rm -rf $(PWD)/build &>/dev/null
