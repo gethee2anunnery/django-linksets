@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(name='django_linksets',
       description='A basic model to include administrable linksets\
       in templates.',
-      version='2.0.1',
+      version='2.0.2',
       url='https://github.com/gethee2anunnery/django-linksets',
       author="Sara Perry w/ Nina Pavlich",
       author_email='paraserry@gmail.com',

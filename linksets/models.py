@@ -46,10 +46,8 @@ class LinkItem(models.Model):
     @property
     def admin_levels(self):
         if self.parent:
-            return "%s<span style='color:#fff'>|------</span>"
-            % self.parent.admin_levels
-        else:
-            return ""
+            return "%s<span style='color:#fff'>|------</span>" \
+                   % (self.parent.admin_levels)
 
     @property
     def admin_title(self):
