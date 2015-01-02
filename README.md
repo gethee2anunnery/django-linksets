@@ -21,11 +21,9 @@ If you installed linksets via your requirements file, you will need to add the v
 
 ```
 VENV_SRC_DIR = os.path.join(APP_DIR, 'venv', 'src')
-VENV_LIBS_DIR =  os.path.join(VENV_SRC_DIR, 'django-linksets')
-sys.path.append(VENV_LIBS_DIR)
 ```
 
-Then add into your installed apps:
+Then add linksets into your installed apps:
 
 ```
 INSTALLED_APPS = (
